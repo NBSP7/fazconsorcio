@@ -1,0 +1,70 @@
+import { Instagram, Mail, Phone } from "lucide-react";
+
+const quickLinks = [
+  { label: "Início", href: "#inicio" },
+  { label: "Benefícios", href: "#beneficios" },
+  { label: "Modalidades", href: "#modalidades" },
+  { label: "FAQ", href: "#faq" },
+  { label: "Contato", href: "#contato" },
+];
+
+export function Footer() {
+  return (
+    <footer className="bg-navy text-navy-foreground">
+      <div className="mx-auto max-w-7xl px-5 py-16">
+        <div className="grid gap-10 md:grid-cols-4">
+          <div className="md:col-span-2">
+            <div className="flex items-center gap-2">
+              <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-success font-display text-lg font-bold text-success-foreground">
+                F
+              </span>
+              <span className="font-display text-xl font-bold">
+                Faz<span className="text-success">Consórcio</span>
+              </span>
+            </div>
+            <p className="mt-4 max-w-md text-sm text-navy-foreground/70">
+              A Faz Consórcio oferece soluções inteligentes para quem deseja conquistar patrimônio
+              através do planejamento financeiro.
+            </p>
+          </div>
+
+          <div>
+            <h3 className="font-display font-semibold">Contato</h3>
+            <ul className="mt-4 space-y-3 text-sm text-navy-foreground/70">
+              <li className="flex items-center gap-2">
+                <Phone className="h-4 w-4 text-success" /> (XX) XXXXX-XXXX
+              </li>
+              <li className="flex items-center gap-2">
+                <Mail className="h-4 w-4 text-success" /> contato@fazconsorcio.com.br
+              </li>
+              <li className="flex items-center gap-2">
+                <Instagram className="h-4 w-4 text-success" /> @fazconsorcio
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-display font-semibold">Links rápidos</h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              {quickLinks.map((l) => (
+                <li key={l.href}>
+                  <a href={l.href} className="text-navy-foreground/70 transition-colors hover:text-success">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 border-t border-navy-foreground/15 pt-8 text-xs text-navy-foreground/55">
+          <p>
+            Aviso Legal: A contemplação está sujeita às regras de cada grupo e administradora.
+            Consulte condições vigentes.
+          </p>
+          <p className="mt-4">© 2026 Faz Consórcio. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  );
+}
