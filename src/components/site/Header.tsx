@@ -22,17 +22,8 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
-        <a href="#inicio" className="flex items-center gap-2">
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-success font-display text-lg font-bold text-success-foreground">
-            F
-          </span>
-          <span
-            className={`font-display text-xl font-bold ${
-              scrolled ? "text-foreground" : "text-primary-foreground"
-            }`}
-          >
-            Faz<span className="text-success">Consórcio</span>
-          </span>
+        <a href="#inicio" className="block">
+          <Logo width={170} />
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex">

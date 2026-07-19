@@ -15,14 +15,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2">
-              <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-success font-display text-lg font-bold text-success-foreground">
-                F
-              </span>
-              <span className="font-display text-xl font-bold">
-                Faz<span className="text-success">Consórcio</span>
-              </span>
-            </div>
+            <Logo width={190} />
             <p className="mt-4 max-w-md text-sm text-navy-foreground/70">
               A Faz Consórcio oferece soluções inteligentes para quem deseja conquistar patrimônio
               através do planejamento financeiro.
