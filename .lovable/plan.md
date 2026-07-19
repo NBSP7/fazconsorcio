@@ -1,46 +1,31 @@
-# Inserir logo da Faz Consórcio no site
+## Aplicar nova logo (versão redonda)
 
-## Objetivo
-Substituir os logotipos placeholder ("F" em badge) pela logo oficial enviada e configurá-la como favicon.
+Substituir a logo atual pela nova versão redonda enviada em anexo, mantendo header, footer e favicon sincronizados.
 
-## O que será feito
+### Passos
 
-### 1. Publicar a logo como asset
-- Usar o CLI `lovable-assets` para fazer upload de `user-uploads://Logo_Faz_Consorcio.png`.
-- Gerar o ponteiro `src/assets/logo-faz-consorcio.png.asset.json`.
+1. **Upload do novo asset**
+   - Rodar `lovable-assets create` a partir de `/mnt/user-uploads/Logo_redonda_com_fundo_branco.png` gerando um novo `src/assets/logo-faz-consorcio-round.png.asset.json`.
+   - Remover o pointer antigo `src/assets/logo-faz-consorcio.png.asset.json` via `lovable-assets delete` (garante limpeza no CDN).
 
-### 2. Criar componente de logo reutilizável
-- Criar `src/components/site/Logo.tsx` que importa o asset e renderiza a imagem da logo.
-- Permitir variantes de cor/tamanho via props (`header`, `footer`, `size`).
+2. **Atualizar componente `Logo`**
+   - Trocar o import em `src/components/site/Logo.tsx` para o novo asset.
+   - Como a logo agora é circular (proporção 1:1), ajustar dimensões padrão para ficarem bem no header/footer (ex.: `size` em altura ~56px no header, ~96px no footer) sem distorcer.
 
-### 3. Atualizar Header
-- Substituir o badge "F" + texto "Faz Consórcio" pelo componente `Logo`.
-- Manter o link para `#inicio` e a responsividade.
-- Garantir que a logo fique visível tanto no topo transparente quanto no header scrollado.
+3. **Header (`Header.tsx`)**
+   - Ajustar o tamanho passado ao `<Logo />` para caber bem no header fixo (a versão redonda precisa de menos largura que a horizontal anterior).
 
-### 4. Atualizar Footer
-- Substituir o badge "F" + texto "Faz Consórcio" pelo componente `Logo`.
-- Manter a grid e os links rápidos.
+4. **Footer (`Footer.tsx`)**
+   - Ajustar o tamanho do `<Logo />` para a nova proporção quadrada.
 
-### 5. Configurar favicon
-- Copiar a logo para `public/favicon.png` (como o arquivo já tem fundo branco, servirá bem como favicon).
-- Atualizar `src/routes/__root.tsx` para usar `/favicon.png` no `head().links`.
-- Remover o favicon padrão `public/favicon.ico`.
+5. **Favicon**
+   - Substituir `public/favicon.png` pelo novo arquivo (a versão redonda funciona melhor como favicon).
+   - `src/routes/__root.tsx` já referencia `/favicon.png`, sem mudanças.
 
-### 6. Verificar
-- Rodar o build para garantir que não há erros de importação.
-- Capturar screenshot do header e footer para confirmar que a logo aparece corretamente.
-
-## Arquivos que serão alterados
-- `src/assets/logo-faz-consorcio.png.asset.json` (novo)
-- `src/components/site/Logo.tsx` (novo)
+### Arquivos afetados
+- `src/assets/logo-faz-consorcio-round.png.asset.json` (novo)
+- `src/assets/logo-faz-consorcio.png.asset.json` (removido)
+- `src/components/site/Logo.tsx`
 - `src/components/site/Header.tsx`
 - `src/components/site/Footer.tsx`
-- `src/routes/__root.tsx`
-- `public/favicon.png` (novo)
-- `public/favicon.ico` (removido)
-
-## Notas técnicas
-- O upload será feito via Lovable Assets para manter o repositório leve.
-- A logo será renderizada como `<img>` com `alt="Faz Consórcio"`.
-- O favicon usará a mesma imagem PNG, evitando duplicar assets.
+- `public/favicon.png` (substituído)

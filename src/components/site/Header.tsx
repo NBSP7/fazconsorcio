@@ -23,7 +23,7 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4">
         <a href="#inicio" className="block">
-          <Logo width={170} />
+          <Logo size={56} />
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex">

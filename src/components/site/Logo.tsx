@@ -1,22 +1,23 @@
-import logoAsset from "@/assets/logo-faz-consorcio.png.asset.json";
+import logoAsset from "@/assets/logo-faz-consorcio-round.png.asset.json";
 
 interface LogoProps {
   alt?: string;
   className?: string;
-  width?: number;
+  size?: number;
 }
 
 export function Logo({
   alt = "Faz Consórcio",
   className = "",
-  width = 200,
+  size = 56,
 }: LogoProps) {
   return (
     <img
       src={logoAsset.url}
       alt={alt}
-      width={width}
-      className={`h-auto object-contain ${className}`}
+      width={size}
+      height={size}
+      className={`object-contain ${className}`}
       loading="eager"
     />
   );
