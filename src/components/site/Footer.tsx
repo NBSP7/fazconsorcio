@@ -1,4 +1,5 @@
 import { Instagram, Mail, Phone } from "lucide-react";
+import { Logo } from "@/components/site/Logo";
 
 const quickLinks = [
   { label: "Início", href: "#inicio" },

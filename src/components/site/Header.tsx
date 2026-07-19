@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/site/Logo";
 import { NAV_LINKS, whatsappUrl } from "@/lib/site";
 
 export function Header() {
