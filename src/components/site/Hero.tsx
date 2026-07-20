@@ -24,10 +24,10 @@ export function Hero() {
       <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-36 md:pt-44">
         <div className="max-w-3xl text-primary-foreground">
           <span className="inline-block rounded-full bg-success/20 px-4 py-1.5 text-sm font-medium text-success-foreground ring-1 ring-success/40">
-            Seu objetivo mais perto de você.
+            Seus Objetivos Mais Perto de Você!
           </span>
           <h1 className="mt-6 font-display text-4xl font-extrabold leading-tight md:text-6xl">
-            Realize seus sonhos com planejamento e inteligência financeira.
+            Construa Seu Patrimônio com Planejamento e Inteligência Financeira: Faz Consórcio, é Sem Juros, é Mais Barato!
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
             Conquiste seu imóvel, veículo, caminhão ou investimento através das melhores cotas de
