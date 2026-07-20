@@ -1,4 +1,4 @@
-import logoAsset from "@/assets/logo-faz-consorcio-round.png.asset.json";
+import logoAsset from "@/assets/logo-faz-consorcio.png.asset.json";
 
 interface LogoProps {
   alt?: string;
