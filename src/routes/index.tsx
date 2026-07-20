@@ -34,7 +34,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "FinancialService",
           name: "Faz Consórcio",
-          slogan: "Seu objetivo mais perto de você.",
+          slogan: "Seus Objetivos Mais Perto de Você!",
           description,
           areaServed: "BR",
         }),

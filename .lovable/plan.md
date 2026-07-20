@@ -1,31 +1,26 @@
-## Aplicar nova logo (versão redonda)
+Ajustar o slogan, headline principal e substituir a logo pelo novo arquivo enviado.
 
-Substituir a logo atual pela nova versão redonda enviada em anexo, mantendo header, footer e favicon sincronizados.
+## Alterações de texto
 
-### Passos
+- **`src/components/site/Hero.tsx`**
+  - Trocar o slogan (badge) de `Seu objetivo mais perto de você.` para `Seus Objetivos Mais Perto de Você!`.
+  - Trocar a headline `<h1>` de `Realize seus sonhos com planejamento e inteligência financeira.` para `Construa Seu Patrimônio com Planejamento e Inteligência Financeira: Faz Consórcio, é Sem Juros, é Mais Barato!`.
 
-1. **Upload do novo asset**
-   - Rodar `lovable-assets create` a partir de `/mnt/user-uploads/Logo_redonda_com_fundo_branco.png` gerando um novo `src/assets/logo-faz-consorcio-round.png.asset.json`.
-   - Remover o pointer antigo `src/assets/logo-faz-consorcio.png.asset.json` via `lovable-assets delete` (garante limpeza no CDN).
+- **`src/routes/index.tsx`**
+  - Atualizar o campo `slogan` no JSON-LD schema de `Seu objetivo mais perto de você.` para `Seus Objetivos Mais Perto de Você!`.
 
-2. **Atualizar componente `Logo`**
-   - Trocar o import em `src/components/site/Logo.tsx` para o novo asset.
-   - Como a logo agora é circular (proporção 1:1), ajustar dimensões padrão para ficarem bem no header/footer (ex.: `size` em altura ~56px no header, ~96px no footer) sem distorcer.
+## Alterações de logo
 
-3. **Header (`Header.tsx`)**
-   - Ajustar o tamanho passado ao `<Logo />` para caber bem no header fixo (a versão redonda precisa de menos largura que a horizontal anterior).
+- **Upload do novo asset**
+  - Enviar `user-uploads://Ultima_logo.png` para o CDN via `lovable-assets create`, gerando um novo `src/assets/logo-faz-consorcio.png.asset.json`.
+  - Deletar o asset anterior `src/assets/logo-faz-consorcio-round.png.asset.json` via `lovable-assets delete`.
 
-4. **Footer (`Footer.tsx`)**
-   - Ajustar o tamanho do `<Logo />` para a nova proporção quadrada.
+- **Atualizar referências**
+  - Em `src/components/site/Logo.tsx`, apontar o import para o novo `.asset.json`.
+  - Ajustar dimensões padrão se necessário (a nova logo também é redonda, então proporção 1:1 continua adequada).
+  - Substituir `public/favicon.png` por uma cópia da nova logo redonda.
 
-5. **Favicon**
-   - Substituir `public/favicon.png` pelo novo arquivo (a versão redonda funciona melhor como favicon).
-   - `src/routes/__root.tsx` já referencia `/favicon.png`, sem mudanças.
+## Validação
 
-### Arquivos afetados
-- `src/assets/logo-faz-consorcio-round.png.asset.json` (novo)
-- `src/assets/logo-faz-consorcio.png.asset.json` (removido)
-- `src/components/site/Logo.tsx`
-- `src/components/site/Header.tsx`
-- `src/components/site/Footer.tsx`
-- `public/favicon.png` (substituído)
+- Executar build/typecheck para garantir que imports e JSX continuam válidos.
+- Verificar visualmente no preview se slogan, headline e nova logo aparecem corretamente no header, footer e favicon.
