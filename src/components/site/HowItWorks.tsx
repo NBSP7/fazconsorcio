@@ -2,8 +2,12 @@ import { Target, Wallet, CalendarCheck, Trophy, KeyRound } from "lucide-react";
 
 const steps = [
   { icon: Target, title: "Escolha o objetivo", desc: "Defina qual bem ou serviço deseja adquirir." },
-  { icon: Wallet, title: "Escolha o crédito ideal", desc: "Selecione o valor da carta de crédito que melhor atende sua necessidade." },
-  { icon: CalendarCheck, title: "Pague parcelas mensais", desc: "Sem juros e com planejamento financeiro." },
+  {
+    icon: Wallet,
+    title: "Escolha o crédito ideal",
+    desc: "Selecione o valor da carta de crédito que melhor atende sua necessidade.",
+  },
+  { icon: CalendarCheck, title: "Pague pacelas mensais", desc: "Sem juros e com planejamento financeiro." },
   { icon: Trophy, title: "Participe das contemplações", desc: "Você pode ser contemplado por sorteio ou lance." },
   { icon: KeyRound, title: "Realize seu sonho", desc: "Utilize a carta de crédito para adquirir o bem desejado." },
 ];
@@ -25,9 +29,7 @@ export function HowItWorks() {
               key={s.title}
               className="relative rounded-2xl border border-border bg-card p-6 shadow-soft transition-transform hover:-translate-y-1"
             >
-              <span className="absolute right-5 top-5 font-display text-4xl font-bold text-primary/10">
-                {i + 1}
-              </span>
+              <span className="absolute right-5 top-5 font-display text-4xl font-bold text-primary/10">{i + 1}</span>
               <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-success text-success-foreground">
                 <s.icon className="h-6 w-6" />
               </div>
