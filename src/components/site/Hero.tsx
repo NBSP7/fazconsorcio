@@ -27,11 +27,11 @@ export function Hero() {
             Seus Objetivos Mais Perto de Você!
           </span>
           <h1 className="mt-6 font-display text-4xl font-extrabold leading-tight md:text-6xl">
-            Construa Seu Patrimônio com Planejamento e Inteligência Financeira: Faz Consórcio, é Sem Juros, é Mais Barato!
+            Construa Seu Patrimônio com Planejamento e Inteligência Financeira: Sem Juros e Mais Barato!
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/85">
-            Conquiste seu imóvel, veículo, caminhão ou investimento através das melhores cotas de
-            consórcio do mercado, sem juros e com parcelas que cabem no seu bolso.
+            Conquiste seu imóvel, veículo, caminhão ou investimento através das melhores cotas de consórcio do mercado,
+            sem juros e com parcelas que cabem no seu bolso.
           </p>
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -58,9 +58,7 @@ export function Hero() {
               key={s.label}
               className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/10 p-5 backdrop-blur-sm"
             >
-              <div className="font-display text-2xl font-bold text-success md:text-3xl">
-                {s.value}
-              </div>
+              <div className="font-display text-2xl font-bold text-success md:text-3xl">{s.value}</div>
               <div className="mt-1 text-sm text-primary-foreground/80">{s.label}</div>
             </div>
           ))}
