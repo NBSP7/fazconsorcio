@@ -7,7 +7,7 @@ const steps = [
     title: "Escolha o crédito ideal",
     desc: "Selecione o valor da carta de crédito que melhor atende sua necessidade.",
   },
-  { icon: CalendarCheck, title: "Pague parcelas mensais", desc: "Sem juros e com planejamento financeiro." },
+  { icon: CalendarCheck, title: "Pague pelas mensais", desc: "Sem juros e com planejamento financeiro." },
   { icon: Trophy, title: "Participe das contemplações", desc: "Você pode ser contemplado por sorteio ou lance." },
   { icon: KeyRound, title: "Realize seu sonho", desc: "Utilize a carta de crédito para adquirir o bem desejado." },
 ];
