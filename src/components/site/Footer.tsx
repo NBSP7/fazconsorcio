@@ -1,25 +1,50 @@
 import { Instagram, Mail, Phone } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 import { Logo } from "@/components/site/Logo";
-
-const quickLinks = [
-  { label: "Início", href: "#inicio" },
-  { label: "Benefícios", href: "#beneficios" },
-  { label: "Modalidades", href: "#modalidades" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contato", href: "#contato" },
-];
+import { NAV_LINKS, FOOTER_LINKS, LEGAL_LINKS } from "@/lib/site";
 
 export function Footer() {
   return (
     <footer className="bg-navy text-navy-foreground">
       <div className="mx-auto max-w-7xl px-5 py-16">
         <div className="grid gap-10 md:grid-cols-4">
-          <div className="md:col-span-2">
+          <div>
             <Logo size={110} />
             <p className="mt-4 max-w-md text-sm text-navy-foreground/70">
               A Faz Consórcio oferece soluções inteligentes para quem deseja conquistar patrimônio
               através do planejamento financeiro.
             </p>
+          </div>
+
+          <div>
+            <h3 className="font-display font-semibold">Navegação</h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              {NAV_LINKS.map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-navy-foreground/70 transition-colors hover:text-success">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link to="/simule-agora" className="text-navy-foreground/70 transition-colors hover:text-success">
+                  Simule Agora
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="font-display font-semibold">Institucional</h3>
+            <ul className="mt-4 space-y-3 text-sm">
+              {[...FOOTER_LINKS, ...LEGAL_LINKS].map((l) => (
+                <li key={l.to}>
+                  <Link to={l.to} className="text-navy-foreground/70 transition-colors hover:text-success">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           <div>
@@ -34,19 +59,6 @@ export function Footer() {
               <li className="flex items-center gap-2">
                 <Instagram className="h-4 w-4 text-success" /> @fazconsorcio
               </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="font-display font-semibold">Links rápidos</h3>
-            <ul className="mt-4 space-y-3 text-sm">
-              {quickLinks.map((l) => (
-                <li key={l.href}>
-                  <a href={l.href} className="text-navy-foreground/70 transition-colors hover:text-success">
-                    {l.label}
-                  </a>
-                </li>
-              ))}
             </ul>
           </div>
         </div>

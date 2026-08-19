@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Header } from "@/components/site/Header";
 import { Hero } from "@/components/site/Hero";
 import { HowItWorks } from "@/components/site/HowItWorks";
 import { Benefits } from "@/components/site/Benefits";
@@ -7,9 +6,7 @@ import { Modalities } from "@/components/site/Modalities";
 import { FeatureBand } from "@/components/site/FeatureBand";
 import { Testimonials } from "@/components/site/Testimonials";
 import { Faq } from "@/components/site/Faq";
-import { LeadForm } from "@/components/site/LeadForm";
-import { Footer } from "@/components/site/Footer";
-import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+
 
 const title = "Faz Consórcio | Realize seus sonhos sem juros";
 const description =
@@ -46,20 +43,15 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background">
-      <Header />
-      <main>
-        <Hero />
-        <HowItWorks />
-        <Benefits />
-        <Modalities />
-        <FeatureBand />
-        <Testimonials />
-        <Faq />
-        <LeadForm />
-      </main>
-      <Footer />
-      <WhatsAppFloat />
-    </div>
+    <>
+      <Hero />
+      <HowItWorks />
+      <Benefits />
+      <Modalities />
+      <FeatureBand />
+      <Testimonials />
+      <Faq />
+    </>
   );
+
 }

@@ -11,6 +11,10 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Header } from "@/components/site/Header";
+import { Footer } from "@/components/site/Footer";
+import { WhatsAppFloat } from "@/components/site/WhatsAppFloat";
+
 
 function NotFoundComponent() {
   return (
@@ -81,9 +85,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Faz Consórcio" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Lovable App" },
-      { property: "og:title", content: "Lovable App" },
-      { name: "twitter:title", content: "Lovable App" },
+      { title: "Faz Consórcio | Seus Objetivos Mais Perto de Você" },
+      { property: "og:title", content: "Faz Consórcio | Seus Objetivos Mais Perto de Você" },
+      { name: "twitter:title", content: "Faz Consórcio | Seus Objetivos Mais Perto de Você" },
+
       { name: "description", content: "Faz Consórcio offers a professional, high-conversion website for consortium quota sales." },
       { property: "og:description", content: "Faz Consórcio offers a professional, high-conversion website for consortium quota sales." },
       { name: "twitter:description", content: "Faz Consórcio offers a professional, high-conversion website for consortium quota sales." },
@@ -129,8 +134,16 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
-      <Outlet />
+      <div className="min-h-screen bg-background">
+        <Header />
+        <main>
+          {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+          <Outlet />
+        </main>
+        <Footer />
+        <WhatsAppFloat />
+      </div>
     </QueryClientProvider>
   );
 }
+
