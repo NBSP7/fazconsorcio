@@ -9,18 +9,36 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
 import { Route as SolucoesRouteImport } from './routes/solucoes'
+import { Route as SobreRouteImport } from './routes/sobre'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SimuleAgoraRouteImport } from './routes/simule-agora'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
 import { Route as ParceirosRouteImport } from './routes/parceiros'
+import { Route as MapaDoSiteRouteImport } from './routes/mapa-do-site'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as ConsorciosRouteImport } from './routes/consorcios'
 import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AvisosLegaisRouteImport } from './routes/avisos-legais'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
+  id: '/termos-de-uso',
+  path: '/termos-de-uso',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SolucoesRoute = SolucoesRouteImport.update({
   id: '/solucoes',
   path: '/solucoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
@@ -33,9 +51,34 @@ const SimuleAgoraRoute = SimuleAgoraRouteImport.update({
   path: '/simule-agora',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
+  id: '/politica-de-cookies',
+  path: '/politica-de-cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ParceirosRoute = ParceirosRouteImport.update({
   id: '/parceiros',
   path: '/parceiros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapaDoSiteRoute = MapaDoSiteRouteImport.update({
+  id: '/mapa-do-site',
+  path: '/mapa-do-site',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaleConoscoRoute = FaleConoscoRouteImport.update({
+  id: '/fale-conosco',
+  path: '/fale-conosco',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ConsorciosRoute = ConsorciosRouteImport.update({
@@ -53,6 +96,11 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AvisosLegaisRoute = AvisosLegaisRouteImport.update({
+  id: '/avisos-legais',
+  path: '/avisos-legais',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -61,86 +109,156 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
   '/como-funciona': typeof ComoFuncionaRoute
   '/consorcios': typeof ConsorciosRoute
+  '/fale-conosco': typeof FaleConoscoRoute
+  '/faq': typeof FaqRoute
+  '/mapa-do-site': typeof MapaDoSiteRoute
   '/parceiros': typeof ParceirosRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/simule-agora': typeof SimuleAgoraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sobre': typeof SobreRoute
   '/solucoes': typeof SolucoesRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
   '/como-funciona': typeof ComoFuncionaRoute
   '/consorcios': typeof ConsorciosRoute
+  '/fale-conosco': typeof FaleConoscoRoute
+  '/faq': typeof FaqRoute
+  '/mapa-do-site': typeof MapaDoSiteRoute
   '/parceiros': typeof ParceirosRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/simule-agora': typeof SimuleAgoraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sobre': typeof SobreRoute
   '/solucoes': typeof SolucoesRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
   '/como-funciona': typeof ComoFuncionaRoute
   '/consorcios': typeof ConsorciosRoute
+  '/fale-conosco': typeof FaleConoscoRoute
+  '/faq': typeof FaqRoute
+  '/mapa-do-site': typeof MapaDoSiteRoute
   '/parceiros': typeof ParceirosRoute
+  '/politica-de-cookies': typeof PoliticaDeCookiesRoute
+  '/politica-de-privacidade': typeof PoliticaDePrivacidadeRoute
   '/simule-agora': typeof SimuleAgoraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/sobre': typeof SobreRoute
   '/solucoes': typeof SolucoesRoute
+  '/termos-de-uso': typeof TermosDeUsoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/avisos-legais'
     | '/blog'
     | '/como-funciona'
     | '/consorcios'
+    | '/fale-conosco'
+    | '/faq'
+    | '/mapa-do-site'
     | '/parceiros'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
     | '/simule-agora'
     | '/sitemap.xml'
+    | '/sobre'
     | '/solucoes'
+    | '/termos-de-uso'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/avisos-legais'
     | '/blog'
     | '/como-funciona'
     | '/consorcios'
+    | '/fale-conosco'
+    | '/faq'
+    | '/mapa-do-site'
     | '/parceiros'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
     | '/simule-agora'
     | '/sitemap.xml'
+    | '/sobre'
     | '/solucoes'
+    | '/termos-de-uso'
   id:
     | '__root__'
     | '/'
+    | '/avisos-legais'
     | '/blog'
     | '/como-funciona'
     | '/consorcios'
+    | '/fale-conosco'
+    | '/faq'
+    | '/mapa-do-site'
     | '/parceiros'
+    | '/politica-de-cookies'
+    | '/politica-de-privacidade'
     | '/simule-agora'
     | '/sitemap.xml'
+    | '/sobre'
     | '/solucoes'
+    | '/termos-de-uso'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AvisosLegaisRoute: typeof AvisosLegaisRoute
   BlogRoute: typeof BlogRoute
   ComoFuncionaRoute: typeof ComoFuncionaRoute
   ConsorciosRoute: typeof ConsorciosRoute
+  FaleConoscoRoute: typeof FaleConoscoRoute
+  FaqRoute: typeof FaqRoute
+  MapaDoSiteRoute: typeof MapaDoSiteRoute
   ParceirosRoute: typeof ParceirosRoute
+  PoliticaDeCookiesRoute: typeof PoliticaDeCookiesRoute
+  PoliticaDePrivacidadeRoute: typeof PoliticaDePrivacidadeRoute
   SimuleAgoraRoute: typeof SimuleAgoraRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SobreRoute: typeof SobreRoute
   SolucoesRoute: typeof SolucoesRoute
+  TermosDeUsoRoute: typeof TermosDeUsoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/termos-de-uso': {
+      id: '/termos-de-uso'
+      path: '/termos-de-uso'
+      fullPath: '/termos-de-uso'
+      preLoaderRoute: typeof TermosDeUsoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/solucoes': {
       id: '/solucoes'
       path: '/solucoes'
       fullPath: '/solucoes'
       preLoaderRoute: typeof SolucoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/sitemap.xml': {
@@ -157,11 +275,46 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SimuleAgoraRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-cookies': {
+      id: '/politica-de-cookies'
+      path: '/politica-de-cookies'
+      fullPath: '/politica-de-cookies'
+      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/parceiros': {
       id: '/parceiros'
       path: '/parceiros'
       fullPath: '/parceiros'
       preLoaderRoute: typeof ParceirosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mapa-do-site': {
+      id: '/mapa-do-site'
+      path: '/mapa-do-site'
+      fullPath: '/mapa-do-site'
+      preLoaderRoute: typeof MapaDoSiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fale-conosco': {
+      id: '/fale-conosco'
+      path: '/fale-conosco'
+      fullPath: '/fale-conosco'
+      preLoaderRoute: typeof FaleConoscoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/consorcios': {
@@ -185,6 +338,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/avisos-legais': {
+      id: '/avisos-legais'
+      path: '/avisos-legais'
+      fullPath: '/avisos-legais'
+      preLoaderRoute: typeof AvisosLegaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -197,13 +357,21 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AvisosLegaisRoute: AvisosLegaisRoute,
   BlogRoute: BlogRoute,
   ComoFuncionaRoute: ComoFuncionaRoute,
   ConsorciosRoute: ConsorciosRoute,
+  FaleConoscoRoute: FaleConoscoRoute,
+  FaqRoute: FaqRoute,
+  MapaDoSiteRoute: MapaDoSiteRoute,
   ParceirosRoute: ParceirosRoute,
+  PoliticaDeCookiesRoute: PoliticaDeCookiesRoute,
+  PoliticaDePrivacidadeRoute: PoliticaDePrivacidadeRoute,
   SimuleAgoraRoute: SimuleAgoraRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SobreRoute: SobreRoute,
   SolucoesRoute: SolucoesRoute,
+  TermosDeUsoRoute: TermosDeUsoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
