@@ -13,7 +13,22 @@ export const Route = createFileRoute("/sitemap.xml")({
   server: {
     handlers: {
       GET: async () => {
-        const entries: SitemapEntry[] = [{ path: "/", changefreq: "weekly", priority: "1.0" }];
+        const entries: SitemapEntry[] = [
+          { path: "/", changefreq: "weekly", priority: "1.0" },
+          { path: "/consorcios", changefreq: "weekly", priority: "0.9" },
+          { path: "/solucoes", changefreq: "weekly", priority: "0.9" },
+          { path: "/como-funciona", changefreq: "weekly", priority: "0.8" },
+          { path: "/simule-agora", changefreq: "weekly", priority: "0.8" },
+          { path: "/blog", changefreq: "weekly", priority: "0.7" },
+          { path: "/sobre", changefreq: "weekly", priority: "0.6" },
+          { path: "/fale-conosco", changefreq: "weekly", priority: "0.6" },
+          { path: "/faq", changefreq: "weekly", priority: "0.6" },
+          { path: "/mapa-do-site", changefreq: "weekly", priority: "0.4" },
+          { path: "/politica-de-privacidade", changefreq: "weekly", priority: "0.3" },
+          { path: "/politica-de-cookies", changefreq: "weekly", priority: "0.3" },
+          { path: "/termos-de-uso", changefreq: "weekly", priority: "0.3" },
+          { path: "/avisos-legais", changefreq: "weekly", priority: "0.3" },
+        ];
 
         const urls = entries.map((e) =>
           [
