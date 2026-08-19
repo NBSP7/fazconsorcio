@@ -9,12 +9,48 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SolucoesRouteImport } from './routes/solucoes'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SimuleAgoraRouteImport } from './routes/simule-agora'
+import { Route as ParceirosRouteImport } from './routes/parceiros'
+import { Route as ConsorciosRouteImport } from './routes/consorcios'
+import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
+import { Route as BlogRouteImport } from './routes/blog'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SolucoesRoute = SolucoesRouteImport.update({
+  id: '/solucoes',
+  path: '/solucoes',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SimuleAgoraRoute = SimuleAgoraRouteImport.update({
+  id: '/simule-agora',
+  path: '/simule-agora',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParceirosRoute = ParceirosRouteImport.update({
+  id: '/parceiros',
+  path: '/parceiros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorciosRoute = ConsorciosRouteImport.update({
+  id: '/consorcios',
+  path: '/consorcios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
+  id: '/como-funciona',
+  path: '/como-funciona',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +61,128 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/como-funciona': typeof ComoFuncionaRoute
+  '/consorcios': typeof ConsorciosRoute
+  '/parceiros': typeof ParceirosRoute
+  '/simule-agora': typeof SimuleAgoraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/solucoes': typeof SolucoesRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/como-funciona': typeof ComoFuncionaRoute
+  '/consorcios': typeof ConsorciosRoute
+  '/parceiros': typeof ParceirosRoute
+  '/simule-agora': typeof SimuleAgoraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/solucoes': typeof SolucoesRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/blog': typeof BlogRoute
+  '/como-funciona': typeof ComoFuncionaRoute
+  '/consorcios': typeof ConsorciosRoute
+  '/parceiros': typeof ParceirosRoute
+  '/simule-agora': typeof SimuleAgoraRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/solucoes': typeof SolucoesRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/sitemap.xml'
+  fullPaths:
+    | '/'
+    | '/blog'
+    | '/como-funciona'
+    | '/consorcios'
+    | '/parceiros'
+    | '/simule-agora'
+    | '/sitemap.xml'
+    | '/solucoes'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/sitemap.xml'
-  id: '__root__' | '/' | '/sitemap.xml'
+  to:
+    | '/'
+    | '/blog'
+    | '/como-funciona'
+    | '/consorcios'
+    | '/parceiros'
+    | '/simule-agora'
+    | '/sitemap.xml'
+    | '/solucoes'
+  id:
+    | '__root__'
+    | '/'
+    | '/blog'
+    | '/como-funciona'
+    | '/consorcios'
+    | '/parceiros'
+    | '/simule-agora'
+    | '/sitemap.xml'
+    | '/solucoes'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  BlogRoute: typeof BlogRoute
+  ComoFuncionaRoute: typeof ComoFuncionaRoute
+  ConsorciosRoute: typeof ConsorciosRoute
+  ParceirosRoute: typeof ParceirosRoute
+  SimuleAgoraRoute: typeof SimuleAgoraRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  SolucoesRoute: typeof SolucoesRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/solucoes': {
+      id: '/solucoes'
+      path: '/solucoes'
+      fullPath: '/solucoes'
+      preLoaderRoute: typeof SolucoesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/sitemap.xml': {
       id: '/sitemap.xml'
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/simule-agora': {
+      id: '/simule-agora'
+      path: '/simule-agora'
+      fullPath: '/simule-agora'
+      preLoaderRoute: typeof SimuleAgoraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parceiros': {
+      id: '/parceiros'
+      path: '/parceiros'
+      fullPath: '/parceiros'
+      preLoaderRoute: typeof ParceirosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcios': {
+      id: '/consorcios'
+      path: '/consorcios'
+      fullPath: '/consorcios'
+      preLoaderRoute: typeof ConsorciosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/como-funciona': {
+      id: '/como-funciona'
+      path: '/como-funciona'
+      fullPath: '/como-funciona'
+      preLoaderRoute: typeof ComoFuncionaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,7 +197,13 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  BlogRoute: BlogRoute,
+  ComoFuncionaRoute: ComoFuncionaRoute,
+  ConsorciosRoute: ConsorciosRoute,
+  ParceirosRoute: ParceirosRoute,
+  SimuleAgoraRoute: SimuleAgoraRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  SolucoesRoute: SolucoesRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
