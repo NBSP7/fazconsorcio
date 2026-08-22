@@ -70,9 +70,19 @@ Ativar o Lovable Cloud (banco de dados integrado) e criar a tabela de leads. O f
 
 Visual preservado. Cards de modalidades apontando para as novas páginas, incluindo Moto, Avião, Lancha e Investidores. Seção de depoimentos e indicadores fictícios removida (conforme sua escolha). Todos os CTAs funcionais.
 
-## 8. Config centralizada (dados pendentes)
+## 8. Config centralizada com os dados reais
 
-Um único arquivo de configuração de marca/contato com WhatsApp, e-mail, Instagram, NAP e `sameAs`. Como esses dados estão pendentes, ficam marcados como não configurados: o número placeholder deixa de ser exibido como contato real e os blocos de contato mostram o canal disponível sem inventar dados. Ao preencher a config, contato, WhatsApp e schema local passam a funcionar automaticamente.
+Um único arquivo de configuração de marca, contato e NAP com os dados que você enviou:
+
+- Site: `https://www.fazconsorcio.com.br` (usado em `SITE_URL`, canonical, `og:url`, sitemap e `robots.txt`)
+- WhatsApp: +55 81 99709-0029 (todos os links `wa.me` e mensagens por modalidade)
+- E-mail: falecom@fazconsorcio.com.br
+- Instagram: instagram.com/fazconsorcio (usado em `sameAs`)
+- CNPJ: 34.257.413/0001-78
+- Endereço: Av. República do Líbano, 251, Torre 3, Sala 2403, Pina, Recife/PE, CEP 51110-160
+
+Esses dados passam a aparecer no rodapé, na página `/contato`, na `/sobre`, na Política de Privacidade e nos Termos, sempre a partir da config única. Com endereço e CNPJ reais, o JSON-LD da Home usa Organization + FinancialService com `address` (PostalAddress), `telephone`, `email` e `sameAs`, preparado para consistência com o Google Business Profile.
+
 
 ## 9. LGPD, termos, performance e acessibilidade
 
