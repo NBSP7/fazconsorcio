@@ -98,6 +98,6 @@ Esses dados passam a aparecer no rodapé, na página `/contato`, na `/sobre`, na
 - Persistência do lead via server function do TanStack Start com validação Zod no cliente e no servidor; tabela com RLS e grants (insert público para o formulário, leitura apenas via service role).
 - Validação final: build e typecheck limpos, todas as rotas respondendo, links e imports íntegros, menu desktop/mobile, responsividade, sitemap/robots válidos, JSON-LD válido e console sem erros.
 
-## Dependente de dados reais do cliente
+## Pendências fora do código
 
-Domínio oficial, WhatsApp, e-mail, Instagram, CNPJ/endereço (se aplicável) e administradora parceira, caso seja divulgada.
+Todos os dados de contato foram fornecidos. Restam apenas: conectar o domínio www.fazconsorcio.com.br nas configurações do projeto (DNS) e informar a administradora parceira, caso queira divulgá-la no site.
