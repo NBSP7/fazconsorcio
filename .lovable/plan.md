@@ -60,7 +60,7 @@ Ativar o Lovable Cloud (banco de dados integrado) e criar a tabela de leads. O f
 
 - `lang="pt-BR"`, 404 e telas de erro em português, nenhum texto/metadado em inglês nem "Lovable App".
 - Title e meta description únicos por rota; um H1 por página; hierarquia H2/H3 correta.
-- Constante única `SITE_URL` para canonical e `og:url` absolutos, Open Graph e Twitter Card por página.
+- Constante única `SITE_URL` = `https://www.fazconsorcio.com.br` para canonical e `og:url` absolutos, Open Graph e Twitter Card por página.
 - Imagem OG oficial da marca (gerada a partir da logo), substituindo o screenshot de preview; removida do `__root` e definida por página.
 - JSON-LD: Organization na Home, BreadcrumbList nas internas, AboutPage + Organization em `/sobre`, Article em `/como-funciona-o-consorcio`, BlogPosting nos artigos. Sem Product, sem AggregateRating/Review.
 - Sitemap XML com URLs absolutas de todas as rotas e artigos; `robots.txt` com `Allow: /`, referência ao sitemap e sem bloquear OAI-SearchBot.
