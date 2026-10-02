@@ -9,121 +9,31 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as AvisosLegaisRouteImport } from './routes/avisos-legais'
-import { Route as BlogRouteImport } from './routes/blog'
-import { Route as ComoFuncionaConsorcioRouteImport } from './routes/como-funciona-consorcio'
-import { Route as ConsorcioDeAutomovelRouteImport } from './routes/consorcio-de-automovel'
-import { Route as ConsorcioDeCaminhaoRouteImport } from './routes/consorcio-de-caminhao'
-import { Route as ConsorcioDeImovelRouteImport } from './routes/consorcio-de-imovel'
-import { Route as ConsorcioDeMotoRouteImport } from './routes/consorcio-de-moto'
-import { Route as ConsorcioDeServicoRouteImport } from './routes/consorcio-de-servico'
-import { Route as ConsorciosRouteImport } from './routes/consorcios'
-import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
-import { Route as FaqRouteImport } from './routes/faq'
-import { Route as MapaDoSiteRouteImport } from './routes/mapa-do-site'
-import { Route as ParceirosRouteImport } from './routes/parceiros'
-import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
-import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
-import { Route as SimuleAgoraRouteImport } from './routes/simule-agora'
-import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as SobreRouteImport } from './routes/sobre'
-import { Route as SolucoesRouteImport } from './routes/solucoes'
 import { Route as TermosDeUsoRouteImport } from './routes/termos-de-uso'
+import { Route as SolucoesRouteImport } from './routes/solucoes'
+import { Route as SobreRouteImport } from './routes/sobre'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as SimuleAgoraRouteImport } from './routes/simule-agora'
+import { Route as PoliticaDePrivacidadeRouteImport } from './routes/politica-de-privacidade'
+import { Route as PoliticaDeCookiesRouteImport } from './routes/politica-de-cookies'
+import { Route as ParceirosRouteImport } from './routes/parceiros'
+import { Route as MapaDoSiteRouteImport } from './routes/mapa-do-site'
+import { Route as FaqRouteImport } from './routes/faq'
+import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
+import { Route as ConsorciosRouteImport } from './routes/consorcios'
+import { Route as ConsorcioDeServicoRouteImport } from './routes/consorcio-de-servico'
+import { Route as ConsorcioDeMotoRouteImport } from './routes/consorcio-de-moto'
+import { Route as ConsorcioDeImovelRouteImport } from './routes/consorcio-de-imovel'
+import { Route as ConsorcioDeCaminhaoRouteImport } from './routes/consorcio-de-caminhao'
+import { Route as ConsorcioDeAutomovelRouteImport } from './routes/consorcio-de-automovel'
+import { Route as ComoFuncionaConsorcioRouteImport } from './routes/como-funciona-consorcio'
+import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AvisosLegaisRouteImport } from './routes/avisos-legais'
+import { Route as IndexRouteImport } from './routes/index'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AvisosLegaisRoute = AvisosLegaisRouteImport.update({
-  id: '/avisos-legais',
-  path: '/avisos-legais',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const BlogRoute = BlogRouteImport.update({
-  id: '/blog',
-  path: '/blog',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ComoFuncionaConsorcioRoute = ComoFuncionaConsorcioRouteImport.update({
-  id: '/como-funciona-consorcio',
-  path: '/como-funciona-consorcio',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsorcioDeAutomovelRoute = ConsorcioDeAutomovelRouteImport.update({
-  id: '/consorcio-de-automovel',
-  path: '/consorcio-de-automovel',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsorcioDeCaminhaoRoute = ConsorcioDeCaminhaoRouteImport.update({
-  id: '/consorcio-de-caminhao',
-  path: '/consorcio-de-caminhao',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsorcioDeImovelRoute = ConsorcioDeImovelRouteImport.update({
-  id: '/consorcio-de-imovel',
-  path: '/consorcio-de-imovel',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsorcioDeMotoRoute = ConsorcioDeMotoRouteImport.update({
-  id: '/consorcio-de-moto',
-  path: '/consorcio-de-moto',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsorcioDeServicoRoute = ConsorcioDeServicoRouteImport.update({
-  id: '/consorcio-de-servico',
-  path: '/consorcio-de-servico',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ConsorciosRoute = ConsorciosRouteImport.update({
-  id: '/consorcios',
-  path: '/consorcios',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaleConoscoRoute = FaleConoscoRouteImport.update({
-  id: '/fale-conosco',
-  path: '/fale-conosco',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const FaqRoute = FaqRouteImport.update({
-  id: '/faq',
-  path: '/faq',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const MapaDoSiteRoute = MapaDoSiteRouteImport.update({
-  id: '/mapa-do-site',
-  path: '/mapa-do-site',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const ParceirosRoute = ParceirosRouteImport.update({
-  id: '/parceiros',
-  path: '/parceiros',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
-  id: '/politica-de-cookies',
-  path: '/politica-de-cookies',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
-  id: '/politica-de-privacidade',
-  path: '/politica-de-privacidade',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SimuleAgoraRoute = SimuleAgoraRouteImport.update({
-  id: '/simule-agora',
-  path: '/simule-agora',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SobreRoute = SobreRouteImport.update({
-  id: '/sobre',
-  path: '/sobre',
+const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
+  id: '/termos-de-uso',
+  path: '/termos-de-uso',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SolucoesRoute = SolucoesRouteImport.update({
@@ -131,9 +41,99 @@ const SolucoesRoute = SolucoesRouteImport.update({
   path: '/solucoes',
   getParentRoute: () => rootRouteImport,
 } as any)
-const TermosDeUsoRoute = TermosDeUsoRouteImport.update({
-  id: '/termos-de-uso',
-  path: '/termos-de-uso',
+const SobreRoute = SobreRouteImport.update({
+  id: '/sobre',
+  path: '/sobre',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SimuleAgoraRoute = SimuleAgoraRouteImport.update({
+  id: '/simule-agora',
+  path: '/simule-agora',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDePrivacidadeRoute = PoliticaDePrivacidadeRouteImport.update({
+  id: '/politica-de-privacidade',
+  path: '/politica-de-privacidade',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PoliticaDeCookiesRoute = PoliticaDeCookiesRouteImport.update({
+  id: '/politica-de-cookies',
+  path: '/politica-de-cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ParceirosRoute = ParceirosRouteImport.update({
+  id: '/parceiros',
+  path: '/parceiros',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MapaDoSiteRoute = MapaDoSiteRouteImport.update({
+  id: '/mapa-do-site',
+  path: '/mapa-do-site',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaleConoscoRoute = FaleConoscoRouteImport.update({
+  id: '/fale-conosco',
+  path: '/fale-conosco',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorciosRoute = ConsorciosRouteImport.update({
+  id: '/consorcios',
+  path: '/consorcios',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeServicoRoute = ConsorcioDeServicoRouteImport.update({
+  id: '/consorcio-de-servico',
+  path: '/consorcio-de-servico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeMotoRoute = ConsorcioDeMotoRouteImport.update({
+  id: '/consorcio-de-moto',
+  path: '/consorcio-de-moto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeImovelRoute = ConsorcioDeImovelRouteImport.update({
+  id: '/consorcio-de-imovel',
+  path: '/consorcio-de-imovel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeCaminhaoRoute = ConsorcioDeCaminhaoRouteImport.update({
+  id: '/consorcio-de-caminhao',
+  path: '/consorcio-de-caminhao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeAutomovelRoute = ConsorcioDeAutomovelRouteImport.update({
+  id: '/consorcio-de-automovel',
+  path: '/consorcio-de-automovel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ComoFuncionaConsorcioRoute = ComoFuncionaConsorcioRouteImport.update({
+  id: '/como-funciona-consorcio',
+  path: '/como-funciona-consorcio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogRoute = BlogRouteImport.update({
+  id: '/blog',
+  path: '/blog',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AvisosLegaisRoute = AvisosLegaisRouteImport.update({
+  id: '/avisos-legais',
+  path: '/avisos-legais',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -305,137 +305,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/avisos-legais': {
-      id: '/avisos-legais'
-      path: '/avisos-legais'
-      fullPath: '/avisos-legais'
-      preLoaderRoute: typeof AvisosLegaisRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/blog': {
-      id: '/blog'
-      path: '/blog'
-      fullPath: '/blog'
-      preLoaderRoute: typeof BlogRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/como-funciona-consorcio': {
-      id: '/como-funciona-consorcio'
-      path: '/como-funciona-consorcio'
-      fullPath: '/como-funciona-consorcio'
-      preLoaderRoute: typeof ComoFuncionaConsorcioRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consorcio-de-automovel': {
-      id: '/consorcio-de-automovel'
-      path: '/consorcio-de-automovel'
-      fullPath: '/consorcio-de-automovel'
-      preLoaderRoute: typeof ConsorcioDeAutomovelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consorcio-de-caminhao': {
-      id: '/consorcio-de-caminhao'
-      path: '/consorcio-de-caminhao'
-      fullPath: '/consorcio-de-caminhao'
-      preLoaderRoute: typeof ConsorcioDeCaminhaoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consorcio-de-imovel': {
-      id: '/consorcio-de-imovel'
-      path: '/consorcio-de-imovel'
-      fullPath: '/consorcio-de-imovel'
-      preLoaderRoute: typeof ConsorcioDeImovelRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consorcio-de-moto': {
-      id: '/consorcio-de-moto'
-      path: '/consorcio-de-moto'
-      fullPath: '/consorcio-de-moto'
-      preLoaderRoute: typeof ConsorcioDeMotoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consorcio-de-servico': {
-      id: '/consorcio-de-servico'
-      path: '/consorcio-de-servico'
-      fullPath: '/consorcio-de-servico'
-      preLoaderRoute: typeof ConsorcioDeServicoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/consorcios': {
-      id: '/consorcios'
-      path: '/consorcios'
-      fullPath: '/consorcios'
-      preLoaderRoute: typeof ConsorciosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/fale-conosco': {
-      id: '/fale-conosco'
-      path: '/fale-conosco'
-      fullPath: '/fale-conosco'
-      preLoaderRoute: typeof FaleConoscoRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/faq': {
-      id: '/faq'
-      path: '/faq'
-      fullPath: '/faq'
-      preLoaderRoute: typeof FaqRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/mapa-do-site': {
-      id: '/mapa-do-site'
-      path: '/mapa-do-site'
-      fullPath: '/mapa-do-site'
-      preLoaderRoute: typeof MapaDoSiteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/parceiros': {
-      id: '/parceiros'
-      path: '/parceiros'
-      fullPath: '/parceiros'
-      preLoaderRoute: typeof ParceirosRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/politica-de-cookies': {
-      id: '/politica-de-cookies'
-      path: '/politica-de-cookies'
-      fullPath: '/politica-de-cookies'
-      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/politica-de-privacidade': {
-      id: '/politica-de-privacidade'
-      path: '/politica-de-privacidade'
-      fullPath: '/politica-de-privacidade'
-      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/simule-agora': {
-      id: '/simule-agora'
-      path: '/simule-agora'
-      fullPath: '/simule-agora'
-      preLoaderRoute: typeof SimuleAgoraRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/sobre': {
-      id: '/sobre'
-      path: '/sobre'
-      fullPath: '/sobre'
-      preLoaderRoute: typeof SobreRouteImport
+    '/termos-de-uso': {
+      id: '/termos-de-uso'
+      path: '/termos-de-uso'
+      fullPath: '/termos-de-uso'
+      preLoaderRoute: typeof TermosDeUsoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/solucoes': {
@@ -445,11 +319,137 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SolucoesRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/termos-de-uso': {
-      id: '/termos-de-uso'
-      path: '/termos-de-uso'
-      fullPath: '/termos-de-uso'
-      preLoaderRoute: typeof TermosDeUsoRouteImport
+    '/sobre': {
+      id: '/sobre'
+      path: '/sobre'
+      fullPath: '/sobre'
+      preLoaderRoute: typeof SobreRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/simule-agora': {
+      id: '/simule-agora'
+      path: '/simule-agora'
+      fullPath: '/simule-agora'
+      preLoaderRoute: typeof SimuleAgoraRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-privacidade': {
+      id: '/politica-de-privacidade'
+      path: '/politica-de-privacidade'
+      fullPath: '/politica-de-privacidade'
+      preLoaderRoute: typeof PoliticaDePrivacidadeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/politica-de-cookies': {
+      id: '/politica-de-cookies'
+      path: '/politica-de-cookies'
+      fullPath: '/politica-de-cookies'
+      preLoaderRoute: typeof PoliticaDeCookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/parceiros': {
+      id: '/parceiros'
+      path: '/parceiros'
+      fullPath: '/parceiros'
+      preLoaderRoute: typeof ParceirosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mapa-do-site': {
+      id: '/mapa-do-site'
+      path: '/mapa-do-site'
+      fullPath: '/mapa-do-site'
+      preLoaderRoute: typeof MapaDoSiteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/fale-conosco': {
+      id: '/fale-conosco'
+      path: '/fale-conosco'
+      fullPath: '/fale-conosco'
+      preLoaderRoute: typeof FaleConoscoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcios': {
+      id: '/consorcios'
+      path: '/consorcios'
+      fullPath: '/consorcios'
+      preLoaderRoute: typeof ConsorciosRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-servico': {
+      id: '/consorcio-de-servico'
+      path: '/consorcio-de-servico'
+      fullPath: '/consorcio-de-servico'
+      preLoaderRoute: typeof ConsorcioDeServicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-moto': {
+      id: '/consorcio-de-moto'
+      path: '/consorcio-de-moto'
+      fullPath: '/consorcio-de-moto'
+      preLoaderRoute: typeof ConsorcioDeMotoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-imovel': {
+      id: '/consorcio-de-imovel'
+      path: '/consorcio-de-imovel'
+      fullPath: '/consorcio-de-imovel'
+      preLoaderRoute: typeof ConsorcioDeImovelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-caminhao': {
+      id: '/consorcio-de-caminhao'
+      path: '/consorcio-de-caminhao'
+      fullPath: '/consorcio-de-caminhao'
+      preLoaderRoute: typeof ConsorcioDeCaminhaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-automovel': {
+      id: '/consorcio-de-automovel'
+      path: '/consorcio-de-automovel'
+      fullPath: '/consorcio-de-automovel'
+      preLoaderRoute: typeof ConsorcioDeAutomovelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/como-funciona-consorcio': {
+      id: '/como-funciona-consorcio'
+      path: '/como-funciona-consorcio'
+      fullPath: '/como-funciona-consorcio'
+      preLoaderRoute: typeof ComoFuncionaConsorcioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog': {
+      id: '/blog'
+      path: '/blog'
+      fullPath: '/blog'
+      preLoaderRoute: typeof BlogRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/avisos-legais': {
+      id: '/avisos-legais'
+      path: '/avisos-legais'
+      fullPath: '/avisos-legais'
+      preLoaderRoute: typeof AvisosLegaisRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
