@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = "5581999999999";
+export const WHATSAPP_NUMBER = "5581997090029";
 
 export function whatsappUrl(message = "Olá! Gostaria de receber uma simulação de consórcio.") {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
@@ -8,7 +8,7 @@ export const NAV_LINKS = [
   { label: "Início", to: "/" },
   { label: "Consórcios", to: "/consorcios" },
   { label: "Soluções", to: "/solucoes" },
-  { label: "Como Funciona", to: "/como-funciona" },
+  { label: "Como Funciona", to: "/como-funciona-consorcio" },
   { label: "Blog", to: "/blog" },
 ] as const;
 

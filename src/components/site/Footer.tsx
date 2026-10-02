@@ -51,7 +51,7 @@ export function Footer() {
             <h3 className="font-display font-semibold">Contato</h3>
             <ul className="mt-4 space-y-3 text-sm text-navy-foreground/70">
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 text-success" /> (XX) XXXXX-XXXX
+                <Phone className="h-4 w-4 text-success" /> (81) 99709-0029
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="h-4 w-4 text-success" /> contato@fazconsorcio.com.br
