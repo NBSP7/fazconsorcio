@@ -16,6 +16,11 @@ export const Route = createFileRoute("/sitemap.xml")({
         const entries: SitemapEntry[] = [
           { path: "/", changefreq: "weekly", priority: "1.0" },
           { path: "/consorcios", changefreq: "weekly", priority: "0.9" },
+          { path: "/consorcio-de-imovel", changefreq: "weekly", priority: "0.8" },
+          { path: "/consorcio-de-automovel", changefreq: "weekly", priority: "0.8" },
+          { path: "/consorcio-de-moto", changefreq: "weekly", priority: "0.8" },
+          { path: "/consorcio-de-servico", changefreq: "weekly", priority: "0.8" },
+          { path: "/consorcio-de-caminhao", changefreq: "weekly", priority: "0.8" },
           { path: "/solucoes", changefreq: "weekly", priority: "0.9" },
           { path: "/como-funciona", changefreq: "weekly", priority: "0.8" },
           { path: "/simule-agora", changefreq: "weekly", priority: "0.8" },

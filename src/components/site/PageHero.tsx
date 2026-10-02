@@ -1,10 +1,13 @@
+import type { ReactNode } from "react";
+
 interface PageHeroProps {
   eyebrow?: string;
   title: string;
   description?: string;
+  children?: ReactNode;
 }
 
-export function PageHero({ eyebrow, title, description }: PageHeroProps) {
+export function PageHero({ eyebrow, title, description, children }: PageHeroProps) {
   return (
     <section className="bg-gradient-hero pb-16 pt-36 md:pt-44">
       <div className="mx-auto max-w-4xl px-5 text-center text-primary-foreground">
@@ -17,6 +20,7 @@ export function PageHero({ eyebrow, title, description }: PageHeroProps) {
         {description && (
           <p className="mx-auto mt-5 max-w-2xl text-lg text-primary-foreground/85">{description}</p>
         )}
+        {children && <div className="mt-8 flex flex-wrap justify-center gap-3">{children}</div>}
       </div>
     </section>
   );

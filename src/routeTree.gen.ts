@@ -21,6 +21,11 @@ import { Route as MapaDoSiteRouteImport } from './routes/mapa-do-site'
 import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FaleConoscoRouteImport } from './routes/fale-conosco'
 import { Route as ConsorciosRouteImport } from './routes/consorcios'
+import { Route as ConsorcioDeServicoRouteImport } from './routes/consorcio-de-servico'
+import { Route as ConsorcioDeMotoRouteImport } from './routes/consorcio-de-moto'
+import { Route as ConsorcioDeImovelRouteImport } from './routes/consorcio-de-imovel'
+import { Route as ConsorcioDeCaminhaoRouteImport } from './routes/consorcio-de-caminhao'
+import { Route as ConsorcioDeAutomovelRouteImport } from './routes/consorcio-de-automovel'
 import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AvisosLegaisRouteImport } from './routes/avisos-legais'
@@ -86,6 +91,31 @@ const ConsorciosRoute = ConsorciosRouteImport.update({
   path: '/consorcios',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ConsorcioDeServicoRoute = ConsorcioDeServicoRouteImport.update({
+  id: '/consorcio-de-servico',
+  path: '/consorcio-de-servico',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeMotoRoute = ConsorcioDeMotoRouteImport.update({
+  id: '/consorcio-de-moto',
+  path: '/consorcio-de-moto',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeImovelRoute = ConsorcioDeImovelRouteImport.update({
+  id: '/consorcio-de-imovel',
+  path: '/consorcio-de-imovel',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeCaminhaoRoute = ConsorcioDeCaminhaoRouteImport.update({
+  id: '/consorcio-de-caminhao',
+  path: '/consorcio-de-caminhao',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ConsorcioDeAutomovelRoute = ConsorcioDeAutomovelRouteImport.update({
+  id: '/consorcio-de-automovel',
+  path: '/consorcio-de-automovel',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
   id: '/como-funciona',
   path: '/como-funciona',
@@ -112,6 +142,11 @@ export interface FileRoutesByFullPath {
   '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
   '/como-funciona': typeof ComoFuncionaRoute
+  '/consorcio-de-automovel': typeof ConsorcioDeAutomovelRoute
+  '/consorcio-de-caminhao': typeof ConsorcioDeCaminhaoRoute
+  '/consorcio-de-imovel': typeof ConsorcioDeImovelRoute
+  '/consorcio-de-moto': typeof ConsorcioDeMotoRoute
+  '/consorcio-de-servico': typeof ConsorcioDeServicoRoute
   '/consorcios': typeof ConsorciosRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/faq': typeof FaqRoute
@@ -130,6 +165,11 @@ export interface FileRoutesByTo {
   '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
   '/como-funciona': typeof ComoFuncionaRoute
+  '/consorcio-de-automovel': typeof ConsorcioDeAutomovelRoute
+  '/consorcio-de-caminhao': typeof ConsorcioDeCaminhaoRoute
+  '/consorcio-de-imovel': typeof ConsorcioDeImovelRoute
+  '/consorcio-de-moto': typeof ConsorcioDeMotoRoute
+  '/consorcio-de-servico': typeof ConsorcioDeServicoRoute
   '/consorcios': typeof ConsorciosRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/faq': typeof FaqRoute
@@ -149,6 +189,11 @@ export interface FileRoutesById {
   '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
   '/como-funciona': typeof ComoFuncionaRoute
+  '/consorcio-de-automovel': typeof ConsorcioDeAutomovelRoute
+  '/consorcio-de-caminhao': typeof ConsorcioDeCaminhaoRoute
+  '/consorcio-de-imovel': typeof ConsorcioDeImovelRoute
+  '/consorcio-de-moto': typeof ConsorcioDeMotoRoute
+  '/consorcio-de-servico': typeof ConsorcioDeServicoRoute
   '/consorcios': typeof ConsorciosRoute
   '/fale-conosco': typeof FaleConoscoRoute
   '/faq': typeof FaqRoute
@@ -169,6 +214,11 @@ export interface FileRouteTypes {
     | '/avisos-legais'
     | '/blog'
     | '/como-funciona'
+    | '/consorcio-de-automovel'
+    | '/consorcio-de-caminhao'
+    | '/consorcio-de-imovel'
+    | '/consorcio-de-moto'
+    | '/consorcio-de-servico'
     | '/consorcios'
     | '/fale-conosco'
     | '/faq'
@@ -187,6 +237,11 @@ export interface FileRouteTypes {
     | '/avisos-legais'
     | '/blog'
     | '/como-funciona'
+    | '/consorcio-de-automovel'
+    | '/consorcio-de-caminhao'
+    | '/consorcio-de-imovel'
+    | '/consorcio-de-moto'
+    | '/consorcio-de-servico'
     | '/consorcios'
     | '/fale-conosco'
     | '/faq'
@@ -205,6 +260,11 @@ export interface FileRouteTypes {
     | '/avisos-legais'
     | '/blog'
     | '/como-funciona'
+    | '/consorcio-de-automovel'
+    | '/consorcio-de-caminhao'
+    | '/consorcio-de-imovel'
+    | '/consorcio-de-moto'
+    | '/consorcio-de-servico'
     | '/consorcios'
     | '/fale-conosco'
     | '/faq'
@@ -224,6 +284,11 @@ export interface RootRouteChildren {
   AvisosLegaisRoute: typeof AvisosLegaisRoute
   BlogRoute: typeof BlogRoute
   ComoFuncionaRoute: typeof ComoFuncionaRoute
+  ConsorcioDeAutomovelRoute: typeof ConsorcioDeAutomovelRoute
+  ConsorcioDeCaminhaoRoute: typeof ConsorcioDeCaminhaoRoute
+  ConsorcioDeImovelRoute: typeof ConsorcioDeImovelRoute
+  ConsorcioDeMotoRoute: typeof ConsorcioDeMotoRoute
+  ConsorcioDeServicoRoute: typeof ConsorcioDeServicoRoute
   ConsorciosRoute: typeof ConsorciosRoute
   FaleConoscoRoute: typeof FaleConoscoRoute
   FaqRoute: typeof FaqRoute
@@ -324,6 +389,41 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsorciosRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/consorcio-de-servico': {
+      id: '/consorcio-de-servico'
+      path: '/consorcio-de-servico'
+      fullPath: '/consorcio-de-servico'
+      preLoaderRoute: typeof ConsorcioDeServicoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-moto': {
+      id: '/consorcio-de-moto'
+      path: '/consorcio-de-moto'
+      fullPath: '/consorcio-de-moto'
+      preLoaderRoute: typeof ConsorcioDeMotoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-imovel': {
+      id: '/consorcio-de-imovel'
+      path: '/consorcio-de-imovel'
+      fullPath: '/consorcio-de-imovel'
+      preLoaderRoute: typeof ConsorcioDeImovelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-caminhao': {
+      id: '/consorcio-de-caminhao'
+      path: '/consorcio-de-caminhao'
+      fullPath: '/consorcio-de-caminhao'
+      preLoaderRoute: typeof ConsorcioDeCaminhaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/consorcio-de-automovel': {
+      id: '/consorcio-de-automovel'
+      path: '/consorcio-de-automovel'
+      fullPath: '/consorcio-de-automovel'
+      preLoaderRoute: typeof ConsorcioDeAutomovelRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/como-funciona': {
       id: '/como-funciona'
       path: '/como-funciona'
@@ -360,6 +460,11 @@ const rootRouteChildren: RootRouteChildren = {
   AvisosLegaisRoute: AvisosLegaisRoute,
   BlogRoute: BlogRoute,
   ComoFuncionaRoute: ComoFuncionaRoute,
+  ConsorcioDeAutomovelRoute: ConsorcioDeAutomovelRoute,
+  ConsorcioDeCaminhaoRoute: ConsorcioDeCaminhaoRoute,
+  ConsorcioDeImovelRoute: ConsorcioDeImovelRoute,
+  ConsorcioDeMotoRoute: ConsorcioDeMotoRoute,
+  ConsorcioDeServicoRoute: ConsorcioDeServicoRoute,
   ConsorciosRoute: ConsorciosRoute,
   FaleConoscoRoute: FaleConoscoRoute,
   FaqRoute: FaqRoute,
