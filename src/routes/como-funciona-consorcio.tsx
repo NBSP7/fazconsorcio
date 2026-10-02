@@ -6,7 +6,7 @@ const title = "Como Funciona o Consórcio | Faz Consórcio";
 const description =
   "Entenda passo a passo como funciona o consórcio: grupos, assembleias, lances, contemplação e uso da carta de crédito.";
 
-export const Route = createFileRoute("/como-funciona")({
+export const Route = createFileRoute("/como-funciona-consorcio")({
   head: () => ({
     meta: [
       { title },

@@ -26,7 +26,7 @@ import { Route as ConsorcioDeMotoRouteImport } from './routes/consorcio-de-moto'
 import { Route as ConsorcioDeImovelRouteImport } from './routes/consorcio-de-imovel'
 import { Route as ConsorcioDeCaminhaoRouteImport } from './routes/consorcio-de-caminhao'
 import { Route as ConsorcioDeAutomovelRouteImport } from './routes/consorcio-de-automovel'
-import { Route as ComoFuncionaRouteImport } from './routes/como-funciona'
+import { Route as ComoFuncionaConsorcioRouteImport } from './routes/como-funciona-consorcio'
 import { Route as BlogRouteImport } from './routes/blog'
 import { Route as AvisosLegaisRouteImport } from './routes/avisos-legais'
 import { Route as IndexRouteImport } from './routes/index'
@@ -116,9 +116,9 @@ const ConsorcioDeAutomovelRoute = ConsorcioDeAutomovelRouteImport.update({
   path: '/consorcio-de-automovel',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ComoFuncionaRoute = ComoFuncionaRouteImport.update({
-  id: '/como-funciona',
-  path: '/como-funciona',
+const ComoFuncionaConsorcioRoute = ComoFuncionaConsorcioRouteImport.update({
+  id: '/como-funciona-consorcio',
+  path: '/como-funciona-consorcio',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BlogRoute = BlogRouteImport.update({
@@ -141,7 +141,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
-  '/como-funciona': typeof ComoFuncionaRoute
+  '/como-funciona-consorcio': typeof ComoFuncionaConsorcioRoute
   '/consorcio-de-automovel': typeof ConsorcioDeAutomovelRoute
   '/consorcio-de-caminhao': typeof ConsorcioDeCaminhaoRoute
   '/consorcio-de-imovel': typeof ConsorcioDeImovelRoute
@@ -164,7 +164,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
-  '/como-funciona': typeof ComoFuncionaRoute
+  '/como-funciona-consorcio': typeof ComoFuncionaConsorcioRoute
   '/consorcio-de-automovel': typeof ConsorcioDeAutomovelRoute
   '/consorcio-de-caminhao': typeof ConsorcioDeCaminhaoRoute
   '/consorcio-de-imovel': typeof ConsorcioDeImovelRoute
@@ -188,7 +188,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/avisos-legais': typeof AvisosLegaisRoute
   '/blog': typeof BlogRoute
-  '/como-funciona': typeof ComoFuncionaRoute
+  '/como-funciona-consorcio': typeof ComoFuncionaConsorcioRoute
   '/consorcio-de-automovel': typeof ConsorcioDeAutomovelRoute
   '/consorcio-de-caminhao': typeof ConsorcioDeCaminhaoRoute
   '/consorcio-de-imovel': typeof ConsorcioDeImovelRoute
@@ -213,7 +213,7 @@ export interface FileRouteTypes {
     | '/'
     | '/avisos-legais'
     | '/blog'
-    | '/como-funciona'
+    | '/como-funciona-consorcio'
     | '/consorcio-de-automovel'
     | '/consorcio-de-caminhao'
     | '/consorcio-de-imovel'
@@ -236,7 +236,7 @@ export interface FileRouteTypes {
     | '/'
     | '/avisos-legais'
     | '/blog'
-    | '/como-funciona'
+    | '/como-funciona-consorcio'
     | '/consorcio-de-automovel'
     | '/consorcio-de-caminhao'
     | '/consorcio-de-imovel'
@@ -259,7 +259,7 @@ export interface FileRouteTypes {
     | '/'
     | '/avisos-legais'
     | '/blog'
-    | '/como-funciona'
+    | '/como-funciona-consorcio'
     | '/consorcio-de-automovel'
     | '/consorcio-de-caminhao'
     | '/consorcio-de-imovel'
@@ -283,7 +283,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AvisosLegaisRoute: typeof AvisosLegaisRoute
   BlogRoute: typeof BlogRoute
-  ComoFuncionaRoute: typeof ComoFuncionaRoute
+  ComoFuncionaConsorcioRoute: typeof ComoFuncionaConsorcioRoute
   ConsorcioDeAutomovelRoute: typeof ConsorcioDeAutomovelRoute
   ConsorcioDeCaminhaoRoute: typeof ConsorcioDeCaminhaoRoute
   ConsorcioDeImovelRoute: typeof ConsorcioDeImovelRoute
@@ -424,11 +424,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ConsorcioDeAutomovelRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/como-funciona': {
-      id: '/como-funciona'
-      path: '/como-funciona'
-      fullPath: '/como-funciona'
-      preLoaderRoute: typeof ComoFuncionaRouteImport
+    '/como-funciona-consorcio': {
+      id: '/como-funciona-consorcio'
+      path: '/como-funciona-consorcio'
+      fullPath: '/como-funciona-consorcio'
+      preLoaderRoute: typeof ComoFuncionaConsorcioRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/blog': {
@@ -459,7 +459,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AvisosLegaisRoute: AvisosLegaisRoute,
   BlogRoute: BlogRoute,
-  ComoFuncionaRoute: ComoFuncionaRoute,
+  ComoFuncionaConsorcioRoute: ComoFuncionaConsorcioRoute,
   ConsorcioDeAutomovelRoute: ConsorcioDeAutomovelRoute,
   ConsorcioDeCaminhaoRoute: ConsorcioDeCaminhaoRoute,
   ConsorcioDeImovelRoute: ConsorcioDeImovelRoute,
